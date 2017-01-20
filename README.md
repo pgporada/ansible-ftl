@@ -29,15 +29,17 @@ Put ansible-ftl.sh somewhere on your PATH so you can quickly call it from any di
 `Ansible-ftl.sh` creates a skeleton for a role as follows
 
 ```
-$ tree -lF
+$ tree -alF -I '.git'
 .
 ├── defaults/
 │   └── main.yml
 ├── files/
 ├── Gemfile
 ├── Gemfile.lock
+├── .gitignore
 ├── handlers/
 │   └── main.yml
+├── .kitchen.yml
 ├── meta/
 │   └── main.yml
 ├── README.md
@@ -45,14 +47,16 @@ $ tree -lF
 │   ├── install_RedHat.yml
 │   └── main.yml
 ├── templates/
-└── test/
-    ├── integration/
-    │   └── default/
-    │       ├── bats/
-    │       │   ├── 01_test.bats
-    │       │   └── 99_idempotence.bats
-    │       └── default.yml
-    └── requirements.yml
+├── test/
+│   ├── integration/
+│   │   └── default/
+│   │       ├── bats/
+│   │       │   ├── 01_test.bats
+│   │       │   └── 99_idempotence.bats
+│   │       └── default.yml
+│   └── requirements.yml
+├── .vagrant.rb
+└── .yamllint
 
-10 directories, 12 files
+10 directories, 16 files
 ```
